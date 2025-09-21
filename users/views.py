@@ -3,6 +3,10 @@ from django.views.generic import TemplateView
 from .forms import userForm
 
 # Create your views here.
+
+def homeview(request):
+    return render(request,'home.html',{})
+
 class LoginView(TemplateView):
     template_name = 'users/loginform.html'
     form_class = userForm
